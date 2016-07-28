@@ -8,9 +8,6 @@ return {
         name = "weather_shm"
     },
 
-
-    user_danmu_interval = 7,  --用户发弹幕的时间间隔
-
     --写redis服务器配置
     redis = {
         host = '127.0.0.1',
