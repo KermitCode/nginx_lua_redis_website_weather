@@ -12,10 +12,10 @@ cachePath = base_path .. "cache/"
 --1,比高时
 function modhelp.sort_high(a, b)
     local r
-    if a.tem1 == b.tem1 then
-        r = a.temavg > b.temavg
-    else
+    if a.tem2 == b.tem2 then
         r = a.tem1 > b.tem1
+    else
+        r = a.tem2 > b.tem2
     end
     return r
 end
@@ -23,10 +23,10 @@ end
 --2,比低时
 function modhelp.sort_low(a, b)
     local r
-    if a.tem2 == b.tem2 then
-        r = a.temavg < b.temavg
-    else
+    if a.tem1 == b.tem1 then
         r = a.tem2 < b.tem2
+    else
+        r = a.tem1 < b.tem1
     end
     return r
 end
@@ -38,11 +38,11 @@ function modhelp.sort_avg(a, b)
     a.a_off = math.abs(a.temavg-25)
     b.b_off = math.abs(b.temavg-25)
     if a.aoff == b.boff then
-        return a.a_off < b.b_off
+        r= a.a_off < b.b_off
     else
         r = a.aoff < b.boff
     end
-    return
+    return r
 end
 
 --4,传入table,传入排序依据返回数据
