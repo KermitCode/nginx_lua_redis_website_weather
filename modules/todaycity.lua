@@ -99,7 +99,7 @@ function todaycity.run(request)
         if row.tem2 ~= oldhigh or row.tem1 ~= oldlow then index = index + 1 end
         if first <= 10 then class=' class="danger" '; clafirst = 'class="reds"'
             --循环期间将这天的最热、最冷、最适宜的前10位城市数据写入redis
-            table.insert(most, {pro_char,row.tem1,row.tem2,row.temavg})
+            table.insert(most, {row.cityname,row.tem1,row.tem2,row.temavg})
         elseif math.fmod(index,2) == 1 then class=' class="info" ';clafirst = ''
         else class = '' end
 
