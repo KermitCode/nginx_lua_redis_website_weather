@@ -23,3 +23,6 @@ state_data(8) --一些状态，保存着可能有用
 lua-resty-http，https://github.com/pintsized/lua-resty-http
 
 Lua-Simple-XML-Parser,https://github.com/Cluain/Lua-Simple-XML-Parser  
+
+页面展示如下：
+<img src="https://raw.githubusercontent.com/KermitCode/nginx_lua_redis_website_weather/master/%E4%BB%8A%E6%97%A5%E5%85%A8%E5%9B%BD%E6%9C%80%E8%88%92%E9%80%82%E5%9F%8E%E5%B8%82%E6%8E%92%E8%A1%8C%E6%A6%9C-04007%E5%9F%8E%E5%B8%82%E6%B8%A9%E5%BA%A6.jpg">
