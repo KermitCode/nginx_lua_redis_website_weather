@@ -1,10 +1,5 @@
 # nginx_lua_redis_website_weather
-使用lua+redis开发的简单web站点（nginx_lua_redis_website_weather）
-
-相关介绍：http://www.04007.cn/article/190.html
-
-目前挂在网上的地址：http://weather.04007.cn/
-
+使用lua+redis开发的简单web站点，每天抓取全国主要城市的天气数据存入redis,根据气温显示每日的最舒适的城市明细。（nginx_lua_redis_website_weather）
 功能:用shell定时执行两个update的lua程序，一个是每天更新全国（含各省份的天气数据进入redis).二个是每天更新全国各个省（并发同时抓取)下所有城市的天气数据。都保存进redis.我这边此时的redis数据有：
 city_most_avg(1)  city_most_high(1) city_most_low(1) --记录每天城市的各种极值天气
 
