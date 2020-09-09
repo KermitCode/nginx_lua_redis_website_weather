@@ -31,7 +31,7 @@ Lua-Simple-XML-Parser,https://github.com/Cluain/Lua-Simple-XML-Parser
 #每天每隔3小时更新天气
 #0 */3 * * * /home/shell/update04007weather.sh
 
-定时任务：
+/home/shell/update04007weather.sh任务明细如下：
 #请求URL更新数据
 curl 'http://weather.04007.cn/updateweather' >> weather_province.log
 curl 'http://weather.04007.cn/updatecityweather' >> weather_city.log
