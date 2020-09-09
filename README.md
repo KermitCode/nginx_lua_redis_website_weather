@@ -26,3 +26,21 @@ Lua-Simple-XML-Parser,https://github.com/Cluain/Lua-Simple-XML-Parser
 
 页面展示如下：
 <img src="https://raw.githubusercontent.com/KermitCode/nginx_lua_redis_website_weather/master/%E4%BB%8A%E6%97%A5%E5%85%A8%E5%9B%BD%E6%9C%80%E8%88%92%E9%80%82%E5%9F%8E%E5%B8%82%E6%8E%92%E8%A1%8C%E6%A6%9C-04007%E5%9F%8E%E5%B8%82%E6%B8%A9%E5%BA%A6.jpg">
+
+#/bin/bash
+#每天每隔3小时更新天气
+#0 */3 * * * /home/shell/update04007weather.sh
+
+定时任务：
+#请求URL更新数据
+curl 'http://weather.04007.cn/updateweather' >> weather_province.log
+curl 'http://weather.04007.cn/updatecityweather' >> weather_city.log
+
+#请求URL保存城市数据
+curl 'http://weather.04007.cn/todayprovince/sortkey/avg/save/1' >> weather_province.log
+curl 'http://weather.04007.cn/todayprovince/sortkey/low/save/1' >> weather_province.log
+curl 'http://weather.04007.cn/todayprovince/sortkey/high/save/1' >> weather_province.log 
+
+curl 'http://weather.04007.cn/todaycity/sortkey/avg/save/1' >> weather_city.log 
+curl 'http://weather.04007.cn/todaycity/sortkey/low/save/1' >> weather_city.log 
+curl 'http://weather.04007.cn/todaycity/sortkey/high/save/1' >> weather_city.log
